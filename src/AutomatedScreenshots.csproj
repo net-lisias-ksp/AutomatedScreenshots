@@ -19,9 +19,6 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <CustomCommands>
-      <CustomCommands>
-        <Command type="AfterBuild" command="deploy.bat" externalConsole="True" pauseExternalConsole="True" />
-      </CustomCommands>
     </CustomCommands>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -32,10 +29,6 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <CustomCommands>
-      <CustomCommands>
-        <Command type="AfterBuild" command="deploy.bat" externalConsole="True" />
-        <Command type="AfterBuild" command="buildRelease.bat" externalConsole="True" pauseExternalConsole="True" />
-      </CustomCommands>
     </CustomCommands>
   </PropertyGroup>
   <ItemGroup>
@@ -86,39 +79,29 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>R:\KSP_1.4.3_dev\KSP_x64_Data\Managed\Assembly-CSharp.dll</HintPath>
-    </Reference>
-    <Reference Include="ClickThroughBlocker">
-      <HintPath>R:\KSP_1.4.3_dev\GameData\ClickThroughBlocker\Plugins\ClickThroughBlocker.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
+    <Reference Include="ClickThroughBlocker">
+      <HintPath>..\..\..\LIB\plugins\ClickThroughBlocker.dll</HintPath>
+    </Reference>
     <Reference Include="ToolbarControl">
-      <HintPath>R:\KSP_1.4.3_dev\GameData\001_ToolbarControl\Plugins\ToolbarControl.dll</HintPath>
+      <HintPath>..\..\..\LIB\plugins\ToolbarControl.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>R:\KSP_1.4.3_dev\KSP_x64_Data\Managed\UnityEngine.dll</HintPath>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\LIB\managed\1.4.1\Assembly-CSharp.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.UI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>R:\KSP_1.4.3_dev\KSP_x64_Data\Managed\UnityEngine.UI.dll</HintPath>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>..\..\..\LIB\managed\1.4.1\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\..\LIB\managed\1.4.1\UnityEngine.dll</HintPath>
     </Reference>
   </ItemGroup>
   <PropertyGroup>
     <PostBuildEvent>
-start /D D:\Users\jbb\github\AutomatedScreenshots  /WAIT deploy.bat  $(TargetDir) $(TargetFileName)
-
-if $(ConfigurationName) == Release (
-	start /D D:\Users\jbb\github\AutomatedScreenshots  /WAIT buildRelease.bat $(TargetDir) $(TargetFileName)
-)
-</PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
     <PreBuildEvent>
-set textTemplatingPath="%25ProgramFiles(x86)%25\Microsoft Visual Studio\2017\Community\Common7\IDE \texttransform.exe"
-
-%25textTemplatingPath%25 "$(ProjectDir)\AssemblyVersion.tt"</PreBuildEvent>
+    </PreBuildEvent>
   </PropertyGroup>
 </Project>
