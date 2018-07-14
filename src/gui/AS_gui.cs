@@ -118,7 +118,10 @@ namespace AutomatedScreenshots
 		{
 			UpdateToolbarStock ();
 		}
-        public const string TEXTURE_DIR = "AutomatedScreenshots/PluginData/Textures/";
+		public static readonly string TEXTURE_DIR =
+					KSPUtil.ApplicationRootPath
+					+ "GameData/"
+					+ "AutomatedScreenShots/PluginData/Textures/";
         internal const string MODID = "AutomatedScreenshot_NS";
         internal const string MODNAME = "Automated Screenshot";
         private void UpdateToolbarStock ()
@@ -544,4 +547,4 @@ namespace AutomatedScreenshots
 			}
 		}
 	}
-}
+}
