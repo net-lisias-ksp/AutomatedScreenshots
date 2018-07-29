@@ -1,5 +1,7 @@
 # AutomatedScreenshots :: Change Log
 
+* 2018-0621: 0.8.4.1 (linuxgurugame) for KSP 1.4.x
+	+ Added dependency checking 
 * 2018-0621: 0.8.4 (linuxgurugame) for KSP 1.4.x
 	+ Updated code to use latest version of ToolbarController
 	+ Removed blizzy options, now handled by ToolbarController 
