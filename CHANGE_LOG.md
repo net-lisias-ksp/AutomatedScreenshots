@@ -1,5 +1,8 @@
 # AutomatedScreenshots :: Change Log
 
+* 2018-0621: 0.8.4 (linuxgurugame) for KSP 1.4.x
+	+ Updated code to use latest version of ToolbarController
+	+ Removed blizzy options, now handled by ToolbarController 
 * 2018-0330: 0.8.3 (linuxgurugame) for KSP 1.4.x
 	+ Updated for 1.4.1/1.4.2
 	+ Added support for the Click Through Blocker
