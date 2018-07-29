@@ -1,5 +1,7 @@
 # AutomatedScreenshots :: Change Log
 
+* 2016-0515: 0.7.2 (linuxgurugame) for KSP 1.1
+	+ Added new option to start autosaving after loading game
 * 2016-0419: 0.7.1.2 (linuxgurugame) for KSP 1.1
 	+ No changelog provided 
 * 2015-1002: 7.1.1 (no binary)
