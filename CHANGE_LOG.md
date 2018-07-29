@@ -1,5 +1,8 @@
 # AutomatedScreenshots :: Change Log
 
+* 2016-0916: 0.7.4 (linuxgurugame) for KSP 1.2 PRERELEASE
+	+ Updated for 1.2
+	+ Changed toggle for autosave from ctrl-F5 to ctrl-F6
 * 2016-0523: 0.7.3 (linuxgurugame) for KSP 1.1
 	+ Fixed case issue in file names, only a problem on Linux & OSX 
 * 2016-0515: 0.7.2 (linuxgurugame) for KSP 1.1
