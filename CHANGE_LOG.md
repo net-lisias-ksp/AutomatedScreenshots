@@ -1,5 +1,7 @@
 # AutomatedScreenshots :: Change Log
 
+* 2017-0808: 0.8.1 (linuxgurugame) for KSP 1.3
+	+ Fixed dual screenshots not working all the time 
 * 2017-0602: 0.8.0.1 (linuxgurugame) for KSP 1.3
 	+ Rebuild due to bad packaging 
 * 2017-0526: 0.8.0 (linuxgurugame) for KSP 1.3
