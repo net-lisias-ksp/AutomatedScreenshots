@@ -1,5 +1,7 @@
 # AutomatedScreenshots :: Change Log
 
+* 2016-0419: 0.7.1.2 (linuxgurugame) for KSP 1.1
+	+ No changelog provided 
 * 2015-1002: 7.1.1 (no binary)
 	+ No changelog provided 
 * 2015-1002: 7.1 (no binary)
