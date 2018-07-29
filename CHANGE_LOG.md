@@ -1,5 +1,7 @@
 # AutomatedScreenshots :: Change Log
 
+* 2016-0523: 0.7.3 (linuxgurugame) for KSP 1.1
+	+ Fixed case issue in file names, only a problem on Linux & OSX 
 * 2016-0515: 0.7.2 (linuxgurugame) for KSP 1.1
 	+ Added new option to start autosaving after loading game
 * 2016-0419: 0.7.1.2 (linuxgurugame) for KSP 1.1
