@@ -1,5 +1,9 @@
 # AutomatedScreenshots :: Change Log
 
+* 2017-0130: 0.7.8 (linuxgurugame) for KSP 1.2.1
+	+ Added AssemblyVersion updating code
+	+ Fixed window showing up on the main menu after being in a game
+	+ Fixed toolbar button showing up on the main menu
 * 2016-1102: 0.7.7 (linuxgurugame) for KSP 1.2.1
 	+ Updated version for 1.2.1 
 * 2016-1021: 0.7.6 (linuxgurugame) for KSP 1.2 
