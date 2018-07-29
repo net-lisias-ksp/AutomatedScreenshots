@@ -1,5 +1,7 @@
 # AutomatedScreenshots :: Change Log
 
+* 2016-1102: 0.7.7 (linuxgurugame) for KSP 1.2.1
+	+ Updated version for 1.2.1 
 * 2016-1021: 0.7.6 (linuxgurugame) for KSP 1.2 
 	+ Fixed problem with ToolbarWrapper.cs
 		- Update per blizzy78/ksp_toolbar#39 to prevent NotSupportedException. 
