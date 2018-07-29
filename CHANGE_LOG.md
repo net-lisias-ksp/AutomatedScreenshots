@@ -1,5 +1,11 @@
 # AutomatedScreenshots :: Change Log
 
+* 2018-0330: 0.8.3 (linuxgurugame) for KSP 1.4.x
+	+ Updated for 1.4.1/1.4.2
+	+ Added support for the Click Through Blocker
+	+ Added support for the ToolbarControler
+	+ Removed ALL old toolbar code (greatly simplified codebase)
+	+ Moved textures into PluginData directory to avoid useless error messages from Unity 
 * 2017-1008: 0.8.2 (linuxgurugame) for KSP 1.3.1
 	+ Updated for KSP 1.3.1 
 * 2017-0808: 0.8.1 (linuxgurugame) for KSP 1.3
