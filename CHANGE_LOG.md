@@ -1,5 +1,7 @@
 # AutomatedScreenshots :: Change Log
 
+* 2016-1015: 0.7.5 (linuxgurugame) for KSP 1.2 
+	+ Moved config file into PluginData 
 * 2016-0916: 0.7.4 (linuxgurugame) for KSP 1.2 PRERELEASE
 	+ Updated for 1.2
 	+ Changed toggle for autosave from ctrl-F5 to ctrl-F6
