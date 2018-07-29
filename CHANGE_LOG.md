@@ -1,5 +1,8 @@
 # AutomatedScreenshots :: Change Log
 
+* 2017-0526: 0.8.0 (linuxgurugame) for KSP 1.3
+	+ Replaced depreciated call to GameEvents.onLevelWas Loaded with Unity SceneManagment calls
+	+ Updated for 1.3
 * 2017-0130: 0.7.9 (linuxgurugame) for KSP 1.2.1
 	+ Now deletes the loadmeta file as well as the sfs file
 * 2017-0130: 0.7.8 (linuxgurugame) for KSP 1.2.1
