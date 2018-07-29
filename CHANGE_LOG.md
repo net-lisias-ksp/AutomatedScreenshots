@@ -1,5 +1,7 @@
 # AutomatedScreenshots :: Change Log
 
+* 2017-0130: 0.7.9 (linuxgurugame) for KSP 1.2.1
+	+ Now deletes the loadmeta file as well as the sfs file
 * 2017-0130: 0.7.8 (linuxgurugame) for KSP 1.2.1
 	+ Added AssemblyVersion updating code
 	+ Fixed window showing up on the main menu after being in a game
