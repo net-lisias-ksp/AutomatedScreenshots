@@ -1,5 +1,6 @@
 ﻿//using UnityEngine;
 using System;
+using System.IO;
 //using System.Collections.Generic;
 //using System.Linq;
 //using System.Text;
@@ -11,7 +12,7 @@ namespace AutomatedScreenshots
 	{
 		private static readonly Configuration instance = new Configuration ();
 
-		private static readonly String FILE_NAME = "AutomatedScreenshot.dat";
+		private static readonly String FILE_NAME = Path.Combine(KSPUtil.ApplicationRootPath, "PluginData") + "/AutomatedScreenshot.dat";
 		public  ushort MAX_SUPERSIZE = 4;
 
 		[Persistent] public Log.LEVEL logLevel { get; set; }
@@ -91,10 +92,10 @@ namespace AutomatedScreenshots
 
 		public static Configuration Instance {
 			get {
-				return instance; 
+				return instance;
 			}
 		}
-			
+
 		public void Save ()
 		{
 			Log.Info ("Configuration.Save");
