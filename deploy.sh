@@ -29,5 +29,8 @@ VERSIONFILE=$PACKAGE.version
 
 check
 cp $VERSIONFILE "./GameData/$TARGETDIR"
+cp CHANGE_LOG.md "./GameData/$TARGETDIR"
+cp README.md  "./GameData/$TARGETDIR"
+cp LICENSE "./GameData/$TARGETDIR"
 deploy $PACKAGE
 
