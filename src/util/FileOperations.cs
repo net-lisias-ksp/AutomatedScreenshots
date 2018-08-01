@@ -16,11 +16,13 @@ namespace AutomatedScreenshots
 	public  class FileOperations
 	{
 		public static readonly String ROOT_PATH = KSPUtil.ApplicationRootPath;
-		private static readonly String CONFIG_BASE_FOLDER = ROOT_PATH + "GameData/";
-		private static String AS_BASE_FOLDER = CONFIG_BASE_FOLDER + "AutomatedScreenShots/";
-		private static String AS_NODENAME = "AutomatedScreenShots";
-        private static String AS_CFG_FILE = AS_BASE_FOLDER + "PluginData/AS_Settings.cfg";
-        private static String AS_OLD_CFG_FILE = AS_BASE_FOLDER + "AS_Settings.cfg";
+		private static readonly String GAMEDATA_BASE_FOLDER = Path.Combine(ROOT_PATH, "GameData");
+		private static readonly String CONFIG_BASE_FOLDER = Path.Combine(ROOT_PATH,"PluginData");
+		private static readonly String AS_NODENAME = "AutomatedScreenshots";
+		private static readonly String AS_BASE_FOLDER = Path.Combine(GAMEDATA_BASE_FOLDER, AS_NODENAME);
+		private static readonly String AS_CONFIG_FOLDER = Path.Combine(CONFIG_BASE_FOLDER, AS_NODENAME);
+		private static readonly String AS_CFG_FILE = Path.Combine(AS_CONFIG_FOLDER, "AS_Settings.cfg");
+        private static readonly String AS_OLD_CFG_FILE = Path.Combine(AS_BASE_FOLDER, "PluginData/AS_Settings.cfg");
 
 
         private static ConfigNode configFile = null;
@@ -31,7 +33,8 @@ namespace AutomatedScreenshots
         {
             if (File.Exists(AS_OLD_CFG_FILE))
             {
-                if (!File.Exists(AS_CFG_FILE))
+				if (!Directory.Exists(AS_CONFIG_FOLDER)) Directory.CreateDirectory(AS_CONFIG_FOLDER);
+				if (!File.Exists(AS_CFG_FILE))
                 {
                     try
                     {

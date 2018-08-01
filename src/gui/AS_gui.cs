@@ -121,9 +121,9 @@ namespace AutomatedScreenshots
 		public static readonly string TEXTURE_DIR =
 					KSPUtil.ApplicationRootPath
 					+ "GameData/"
-					+ "AutomatedScreenShots/PluginData/Textures/";
-        internal const string MODID = "AutomatedScreenshot_NS";
-        internal const string MODNAME = "Automated Screenshot";
+					+ "AutomatedScreenshots/PluginData/Textures/";
+        internal const string MODID = "AutomatedScreenshots_NS";
+        internal const string MODNAME = "Automated Screenshots";
         private void UpdateToolbarStock ()
 		{
 			Log.Info ("UpdateToolbarStock, appLaucherHidden: " + appLaucherHidden.ToString());
