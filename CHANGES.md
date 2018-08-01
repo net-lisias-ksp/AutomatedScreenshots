@@ -1,4 +1,6 @@
 # AutomatedScreenshots :: Changes 
 
-* 2018-0621: 0.8.4.1 (linuxgurugame) for KSP 1.4.x
-	+ Added dependency checking 
+* 2018-00804: 0.8.4.2 (Lisias) for KSP 1.4.x (reissue)
+	+ Fixed the Textures path on code
+	+ Fixing name space and directory
+	+ Moving the Configuration Data into <KSP_ROOT>/PluginData .
