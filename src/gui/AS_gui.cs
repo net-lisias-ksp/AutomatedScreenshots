@@ -93,7 +93,7 @@ namespace AutomatedScreenshots
 		{
 			if (!appLaucherHidden) {
 
-                //if (AS.configuration.BlizzyToolbarIsAvailable && AS.configuration.useBlizzyToolbar) 
+                //if (AS.configuration.BlizzyToolbarIsAvailable && AS.configuration.useBlizzyToolbar)
                 {
 					HideToolbarStock ();
 					appLaucherHidden = true;
@@ -101,10 +101,10 @@ namespace AutomatedScreenshots
 
 			}
 		}
-			
+
 		public void OnGUIShowApplicationLauncher ()
 		{
-            //if (!AS.configuration.BlizzyToolbarIsAvailable || !AS.configuration.useBlizzyToolbar) 
+            //if (!AS.configuration.BlizzyToolbarIsAvailable || !AS.configuration.useBlizzyToolbar)
             {
 				if (appLaucherHidden) {
 					appLaucherHidden = false;
@@ -119,9 +119,10 @@ namespace AutomatedScreenshots
 			UpdateToolbarStock ();
 		}
 		public static readonly string TEXTURE_DIR =
-					KSPUtil.ApplicationRootPath
-					+ "GameData/"
-					+ "AutomatedScreenshots/PluginData/Textures/";
+			// Texture2D Toolbar.GetTexture(string path, bool b) automagically does that for us! :D
+					//KSPUtil.ApplicationRootPath
+					//+ "GameData/"
+					"AutomatedScreenshots/PluginData/Textures/";
         internal const string MODID = "AutomatedScreenshots_NS";
         internal const string MODNAME = "Automated Screenshots";
         private void UpdateToolbarStock ()
@@ -153,7 +154,7 @@ namespace AutomatedScreenshots
 		}
 
 		public bool Visible ()
-		{ 
+		{
 			return this.visible;
 		}
 
@@ -162,7 +163,7 @@ namespace AutomatedScreenshots
 			this.visible = visible;
 		}
 
-		
+
 		/////////////////////////////////////
 		public void OnGUI ()
 		{
@@ -187,7 +188,7 @@ namespace AutomatedScreenshots
 				newKeepOrginalPNG = AS.configuration.keepOrginalPNG;
 				newNoGUIOnScreenshot = AS.configuration.noGUIOnScreenshot;
 				newGUIOnScreenshot = AS.configuration.guiOnScreenshot;
-					
+
 				newScreenshotPath = AS.configuration.screenshotPath;
 				newFilename = AS.configuration.filename;
 				newJPGQuality = AS.configuration.JPGQuality;
@@ -217,7 +218,7 @@ namespace AutomatedScreenshots
 				newnumToRotate = AS.configuration.numToRotate;
 				numToRotate = AS.configuration.numToRotate.ToString ();
 				newautoSaveOnGameStart = AS.configuration.autoSaveOnGameStart;
-			} 
+			}
 
 			SetVisible (true);
 			GUI.enabled = true;
@@ -446,7 +447,7 @@ namespace AutomatedScreenshots
 				newnumToRotate = Convert.ToUInt16(numToRotate);
 			} catch (Exception ) {
 			} finally {	}
-				
+
 			GUI.DragWindow ();
 
 		}
@@ -476,7 +477,7 @@ namespace AutomatedScreenshots
 			AS.configuration.JPGQuality = newJPGQuality;
 			if (AS.configuration.JPGQuality < 1 || AS.configuration.JPGQuality > 100)
 				AS.configuration.JPGQuality = 75;
-			AS.configuration.screenshotOnSceneChange = newScreenshotOnSceneChange;	
+			AS.configuration.screenshotOnSceneChange = newScreenshotOnSceneChange;
 			AS.configuration.onSpecialEvent = newOnSpecialEvent;
 			AS.configuration.keycode = newKeycode;
 			AS.configuration.noGUIOnScreenshot = newNoGUIOnScreenshot;
@@ -499,7 +500,7 @@ namespace AutomatedScreenshots
 		public void set_AS_Button_active()
 		{
 			Log.Info ("set_AS_Button_active   AS.doSnapshots: " + AS.doSnapshots.ToString() + "   AS.configuration.autoSave: " + AS.configuration.autoSave.ToString() );
- 
+
 
 				if (AS.doSnapshots == false && AS.configuration.autoSave == false)
 					toolbarControl.SetTexture (TEXTURE_DIR + "Auto-38", TEXTURE_DIR + "Auto-24");
@@ -524,7 +525,7 @@ namespace AutomatedScreenshots
 			ASInfoDisplay.infoDisplayActive = !ASInfoDisplay.infoDisplayActive;
 			if (ASInfoDisplay.infoDisplayActive) {
 				SetVisible (true);
-				toolbarControl.SetTexture (TEXTURE_DIR + "Auto-negative-38", TEXTURE_DIR + "Auto-negative-24"); 
+				toolbarControl.SetTexture (TEXTURE_DIR + "Auto-negative-38", TEXTURE_DIR + "Auto-negative-24");
 			} else {
 				SetVisible (false);
 				set_AS_Button_active ();
@@ -547,4 +548,4 @@ namespace AutomatedScreenshots
 			}
 		}
 	}
-}
+}

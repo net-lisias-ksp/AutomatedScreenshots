@@ -84,6 +84,7 @@ namespace AutomatedScreenshots
 
 		public static void SaveConfiguration (Configuration configuration, String file)
 		{
+			if (!Directory.Exists(AS_CONFIG_FOLDER)) Directory.CreateDirectory(AS_CONFIG_FOLDER);
 			if (configFile == null) {
 				Log.Info ("Creating configFile node");
 				configFile = new ConfigNode ();
@@ -100,10 +101,10 @@ namespace AutomatedScreenshots
 					Log.Info ("Node read");
 					if (configFileNode == null)
 						Log.Info ("configFileNode is null");
-					
+
 				}
 			}
-				
+
 			configFileNode.SetValue ("logLevel", ((ushort)configuration.logLevel).ToString (), true);
 			if (!ValidPathForWriteOperation(configuration.screenshotPath))
 				configuration.screenshotPath = FileOperations.ROOT_PATH + "Screenshots/";
@@ -120,7 +121,7 @@ namespace AutomatedScreenshots
 			configFileNode.SetValue ("keycode", configuration.keycode.ToString (), true);
 			configFileNode.SetValue ("noGUIOnScreenshot", configuration.noGUIOnScreenshot.ToString (), true);
 			configFileNode.SetValue ("guiOnScreenshot", configuration.guiOnScreenshot.ToString (), true);
-		
+
 			configFileNode.SetValue ("precrashSnapshots", configuration.precrashSnapshots.ToString (), true);
 			configFileNode.SetValue ("secondsUntilImpact", configuration.secondsUntilImpact.ToString (), true);
 			configFileNode.SetValue ("hsAltitudeLimit", configuration.hsAltitudeLimit.ToString (), true);
@@ -143,7 +144,7 @@ namespace AutomatedScreenshots
 		//
 		// The following functions are used when loading data from the config file
 		// They make sure that if a value is missing, that the old value will be used.
-		// 
+		//
 		static string SafeLoad (string value, string oldvalue)
 		{
 			if (value == null)
@@ -172,11 +173,11 @@ namespace AutomatedScreenshots
 		public static void LoadConfiguration (Configuration configuration, String file)
 		{
 			configFile = ConfigNode.Load (AS_CFG_FILE);
-	
+
 			if (configFile != null) {
 				configFileNode = configFile.GetNode (AS_NODENAME);
 				if (configFileNode != null) {
-					
+
 					configuration.logLevel = (Log.LEVEL)int.Parse (SafeLoad (configFileNode.GetValue ("logLevel"), configuration.logLevel.ToString ()));
 					configuration.screenshotPath = SafeLoad (configFileNode.GetValue ("screenshotPath"), configuration.screenshotPath);
 					if (configuration.screenshotPath [configuration.screenshotPath.Length - 1] != '/' && configuration.screenshotPath [configuration.screenshotPath.Length - 1] != '\\')
@@ -217,7 +218,7 @@ namespace AutomatedScreenshots
 						configuration.supersize = 0;
 					if (configuration.supersize > configuration.MAX_SUPERSIZE )
 						configuration.supersize = configuration.MAX_SUPERSIZE;
-					
+
 					configuration.minBetweenSaves = ushort.Parse(SafeLoad(configFileNode.GetValue ("minBetweenSaves"),configuration.minBetweenSaves));
 					if (configuration.minBetweenSaves <= 0)
 						configuration.minBetweenSaves = 5;
@@ -227,7 +228,7 @@ namespace AutomatedScreenshots
 					configuration.numToRotate = ushort.Parse(SafeLoad(configFileNode.GetValue ("maxSaveFiles"),configuration.numToRotate));
 					if (configuration.numToRotate <= 0)
 						configuration.numToRotate = 15;
-					
+
 					configuration.autoSaveOnGameStart =
 						bool.Parse (SafeLoad(configFileNode.GetValue ("autoSaveOnGameStart"),configuration.autoSaveOnGameStart));
 				}
