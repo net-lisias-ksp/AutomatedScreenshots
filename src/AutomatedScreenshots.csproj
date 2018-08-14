@@ -37,7 +37,7 @@
     <Compile Include="util\UIClass.cs" />
     <Compile Include="util\Version.cs" />
     <Compile Include="util\saveFilesHandler.cs" />
-    <Compile Include="Version.cs">
+    <Compile Include="Properties\Version.cs">
       <DependentUpon>Version.tt</DependentUpon>
     </Compile>
   </ItemGroup>
@@ -61,7 +61,7 @@
     <None Include="Textures\Auto-snapshot-38.png" />
     <None Include="Textures\Auto-snapshot-save-24.png" />
     <None Include="Textures\Auto-snapshot-save-38.png" />
-    <None Include="Version.tt">
+    <None Include="Properties\Version.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Version.cs</LastGenOutput>
     </None>

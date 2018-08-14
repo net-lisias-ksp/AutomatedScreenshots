@@ -3,7 +3,7 @@ Archive
 bin
 src/.vs
 src/obj
-src/Version.cs
+src/Properties/Version.cs
 GameData/**/*.version
 GameData/**/Plugins/*.dll
 GameData/**/CHANGE_LOG.md
