@@ -29,8 +29,8 @@ using System.Runtime.InteropServices;
 //      Build Number
 //      Revision
 //
-[assembly: AssemblyVersion(AutomatedScreenshots.Versioning.Number)]
-[assembly: AssemblyFileVersion(AutomatedScreenshots.Versioning.Number)]
+[assembly: AssemblyVersion(AutomatedScreenshots.Version.Number)]
+[assembly: AssemblyFileVersion(AutomatedScreenshots.Version.Number)]
 [assembly: KSPAssembly("AutomatedScreenshots", AutomatedScreenshots.Version.major, AutomatedScreenshots.Version.minor)]
 
 //[assembly: KSPAssemblyDependency("KSPe", 2, 0)]

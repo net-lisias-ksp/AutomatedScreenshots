@@ -98,7 +98,7 @@ namespace AutomatedScreenshots
 			Log.Info ("Awake");
 			uiVisiblity = new UICLASS ();
 			uiVisiblity.Awake ();
-			Version.VerifyHistorianVersion ();
+			VersionCheck.VerifyHistorianVersion ();
             GameEvents.onGUIApplicationLauncherUnreadifying.Add(hideNow);
         }
 
@@ -293,7 +293,7 @@ namespace AutomatedScreenshots
 						//
 						// If Historian is available, then tell it to activate
 						//
-						Version.set_m_Active ();
+						VersionCheck.set_m_Active ();
                         // Change second number for supersize.  If non-zero,
                         // then multiplies the resolution by that number
                         // Must be an integer

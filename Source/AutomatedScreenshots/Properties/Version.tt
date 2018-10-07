@@ -27,7 +27,7 @@
 	int i2 = 0;
 	string s;
 
-	string versionfile =  this.Host.ResolvePath("../../AutomatedScreenshots.version");
+	string versionfile =  this.Host.ResolvePath("../../../AutomatedScreenshots.version");
 	if (!File.Exists(versionfile))
 	{
 		Write("File: " + versionfile + " missing\n");		
@@ -88,7 +88,7 @@
 // 
 namespace AutomatedScreenshots
 {
-	static class Versioning
+	static class Version
 	{
 		public const int major = <#= major #>;
 		public const int minor = <#= minor #>;
