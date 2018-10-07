@@ -31,6 +31,7 @@ using System.Runtime.InteropServices;
 //
 [assembly: AssemblyVersion(AutomatedScreenshots.Versioning.Number)]
 [assembly: AssemblyFileVersion(AutomatedScreenshots.Versioning.Number)]
+[assembly: KSPAssembly("AutomatedScreenshots", AutomatedScreenshots.Version.major, AutomatedScreenshots.Version.minor)]
 
-[assembly: KSPAssemblyDependency("ClickThroughBlocker", 1, 0)]
+//[assembly: KSPAssemblyDependency("KSPe", 2, 0)]
 [assembly: KSPAssemblyDependency("ToolbarController", 1, 0)]

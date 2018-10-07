@@ -70,6 +70,18 @@ The mod will now do automatic saves at specified intervals. it will only keep a 
 Automatic saves is turned on by hitting Ctrl-F5
 
 
+## Installation
+
+To install, place the GameData folder inside your Kerbal Space Program folder.
+
+**REMOVE ANY OLD VERSIONS OF THE PRODUCT BEFORE INSTALLING**.
+
+### Dependencies
+* Hard Dependencies
+<!--        * [KSP API Extensions/L](https://github.com/net-lisias-ksp/KSPAPIExtensions) 2.0 or newer -->
+        * [Toolbar Control](https://github.com/net-lisias-kspu/ToolbarControl) 0.1.6.15 or newer
+
+
 ## UPSTREAM
 
 * [linuxgurugamer](https://forum.kerbalspaceprogram.com/index.php?/profile/129964-linuxgurugamer/)
