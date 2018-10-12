@@ -6,8 +6,8 @@ A mod to grab automated screenshots at specific time intervals and special event
 ## In a Hurry
 
 * [Latest Release](https://github.com/net-lisias-kspu/AutomatedScreenshots/releases)
+    + [Binaries](https://github.com/net-lisias-kspu/AutomatedScreenshots/tree/Archive)
 * [Source](https://github.com/net-lisias-kspu/AutomatedScreenshots)
-* [Releases](https://github.com/net-lisias-kspu/AutomatedScreenshots/tree/Archive)
 * [Change Log](./CHANGE_LOG.md)
 
 
